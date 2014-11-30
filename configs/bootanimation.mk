@@ -17,7 +17,7 @@
 
 
 # PA XXXHDPI Devices
-ifneq ($(filter pa_vs985,$(TARGET_PRODUCT)),)
+ifneq ($(filter pa_d850 pa_vs985,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/bootanimation/2560x1440.zip:system/media/bootanimation.zip
 endif
