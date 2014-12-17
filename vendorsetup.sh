@@ -7,7 +7,6 @@ add_lunch_combo pa_d800-userdebug
 add_lunch_combo pa_d801-userdebug
 add_lunch_combo pa_d802-userdebug
 add_lunch_combo pa_d803-userdebug
-add_lunch_combo pa_d850-userdebug
 add_lunch_combo pa_d851-userdebug
 add_lunch_combo pa_d852-userdebug
 add_lunch_combo pa_edison-userdebug
@@ -56,5 +55,4 @@ add_lunch_combo pa_togari-userdebug
 add_lunch_combo pa_umts_spyder-userdebug
 add_lunch_combo pa_ville-userdebug
 add_lunch_combo pa_vs980-userdebug
-add_lunch_combo pa_vs985-userdebug
 add_lunch_combo pa_yuga-userdebug
