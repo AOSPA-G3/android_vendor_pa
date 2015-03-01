@@ -13,11 +13,13 @@
 # limitations under the License.
 
 # Check for target product
+ifeq (pa_dlx,$(TARGET_PRODUCT))
 
-ifeq (pa_find7u,$(TARGET_PRODUCT))
+# Define PA bootanimation size
+PARANOID_BOOTANIMATION_NAME := XHDPI
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xxhdpi
+OVERLAY_TARGET := pa_xhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
@@ -29,20 +31,17 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/oppo/find7u/full_find7u.mk)
+$(call inherit-product, device/htc/dlx/full_dlx.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_find7u
-PRODUCT_DEVICE := find7u
-PRODUCT_BRAND := OPPO
-PRODUCT_MANUFACTURER := OPPO
-PRODUCT_MODEL := find7
-
-# Set build fingerprint / ID / Product Name ect.
+PRODUCT_DEVICE := dlx
+PRODUCT_NAME := pa_dlx
+PRODUCT_BRAND := Verizon
+PRODUCT_MODEL := HTC6435LVW
+PRODUCT_MANUFACTURER := HTC
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_PRODUCT=find7u \
-    TARGET_DEVICE=find7u \
-    BUILD_FINGERPRINT="4.3/JLS36C/1390465867:user/release-keys" \
-    PRIVATE_BUILD_DESC="msm8974-user 4.3 JLS36C eng.root.20140510.152835 release-keys"
+    PRODUCT_NAME=dlx \
+    BUILD_FINGERPRINT=htc/verizon_wwe/dlx:4.4.2/KOT49H/322791.5:user/release-keys \
+    PRIVATE_BUILD_DESC="4.09.605.5 CL322791 release-keys"
 
 endif
